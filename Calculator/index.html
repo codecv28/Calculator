@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,46 +11,60 @@
 </head>
 
 <body>
+    <section class="sideSection" style="display: none;">
+        <div class="sidebar">
+            <button class="Standard">Standard</button>
+            <button class="Scientific">Scientific</button>
+        </div>
+    </section>
+    <div class="main">
 
-    <div class="container">
 
-        <div class="section1">
-            <div class="sidebarBTN">
-                <span class="material-symbols-outlined" style="font-size: 35px;">menu</span>
+
+
+        <div class="title">Standard Calculator</div>
+        <div class="container">
+
+            <div class="section1">
+                <div class="sidebarBTN">
+                    <span class="material-symbols-outlined" style="font-size: 35px;">menu</span>
+                </div>
+
+                <div class="inputField">
+                    <input type="text" placeholder="0" class="input">
+                </div>
             </div>
-            <div class="inputField">
-                <input type="text" placeholder="0" class="input">
+
+            <div class="keypad">
+                <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
+                <button onclick="append('&#41;')" class="key Rbrac">)</button>
+                <button onclick="blank()" class="key clear">C</button>
+                <button onclick="erase()" class="key backspace"><span
+                        class="material-symbols-outlined">backspace</span></button>
+                <button onclick="reciprocal()" class="key reciprocal">1/x</button>
+                <button onclick="square()" class="key square">x²</button>
+                <button onclick="sqroot()" class="key sqroot">²√x</button>
+                <button onclick="append('/')" class="key divide">÷</button>
+                <button onclick="append('7')" class="key seven">7</button>
+                <button onclick="append('8')" class="key eight">8</button>
+                <button onclick="append('9')" class="key nine">9</button>
+                <button onclick="append('*')" class="key multiply">×</button>
+                <button onclick="append('4')" class="key four">4</button>
+                <button onclick="append('5')" class="key five">5</button>
+                <button onclick="append('6')" class="key six">6</button>
+                <button onclick="append('-')" class="key sub">-</button>
+                <button onclick="append('1')" class="key one">1</button>
+                <button onclick="append('2')" class="key two">2</button>
+                <button onclick="append('3')" class="key three">3</button>
+                <button onclick="append('+')" class="key add">+</button>
+                <button onclick="sign()" class="key sign">+/-</button>
+                <button onclick="append('0')" class="key zero">0</button>
+                <button onclick="append('.')" class="key point">.</button>
+                <button onclick="solve()" class="key equal">=</button>
             </div>
         </div>
 
-        <div class="keypad">
-            <button class="key Lbrac">(</button>
-            <button class="key Rbrac">)</button>
-            <button class="key clear">C</button>
-            <button class="key backspace"><span class="material-symbols-outlined">backspace</span></button>
-            <button class="key reciprocal">1/x</button>
-            <button class="key sruare">x²</button>
-            <button class="key sqroot">²√x</button>
-            <button class="key divide">÷</button>
-            <button class="key seven">7</button>
-            <button class="key eight">8</button>
-            <button class="key nine">9</button>
-            <button class="key multiply">×</button>
-            <button class="key four">4</button>
-            <button class="key five">5</button>
-            <button class="key six">6</button>
-            <button class="key sub">-</button>
-            <button class="key one">1</button>
-            <button class="key two">2</button>
-            <button class="key three">3</button>
-            <button class="key add">+</button>
-            <button class="key sign">+/-</button>
-            <button class="key zero">0</button>
-            <button class="key point">.</button>
-            <button class="key equal">=</button>
-        </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 
