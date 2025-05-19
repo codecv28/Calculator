@@ -1,14 +1,73 @@
-// const btn = document.querySelector('.btn');
-// const display = document.querySelector('.displayPanel');
+const input = document.querySelector('.input');
 
-// btn.addEventListener('click' , () => {
-//     const value = document.querySelector('.input').value;
-//     if(!value){
-//         alert("Please enter something");
-//     }
-//     else{
 
-//         display.innerHTML = `<p>${value}</p>`;
-//     }
-// })
+function append(char){
+    input.value += char;
+}
+function blank(){
+    input.value = '';
+}
 
+function erase(){
+    input.value = input.value.slice(0,-1);
+}
+
+function reciprocal(){
+    if(isFinite(input.value)){
+        input.value = 1/input.value
+    }
+    else{
+        input.value = 'Error'
+    }
+}
+
+function square(){
+    if(isFinite(input.value)){
+        input.value = input.value**2
+    }
+    else{
+        input.value = 'Error'
+    }
+}
+
+function sqroot(){
+    if(isFinite(input.value)){
+        input.value = input.value**0.5
+    }
+    else{
+        input.value = 'Error'
+    }
+}
+
+function sign(){
+    if(isFinite(input.value)){
+        input.value = input.value*(-1)
+    }
+    else{input.value = 'Error'}
+}
+
+function solve(){
+    try{
+        
+        input.value = eval(input.value)
+    }
+    catch{
+        input.value = 'Error'
+    }
+}
+
+//sidebar functionality
+const sidebarBTN = document.querySelector('.sidebarBTN');
+const sideSection = document.querySelector('.sideSection');
+
+sidebarBTN.addEventListener('click' , () => {
+    if(sideSection.style.display == 'none'){
+
+        sideSection.style.display = 'block';
+        sidebarBTN.style.transform = 'rotate(90deg)';
+    }
+    else{
+        sideSection.style.display = 'none'
+        sidebarBTN.style.transform = 'rotate(0deg)';
+    }
+    })
