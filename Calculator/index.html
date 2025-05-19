@@ -35,33 +35,89 @@
                 </div>
             </div>
 
-            <div class="keypad">
-                <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
-                <button onclick="append('&#41;')" class="key Rbrac">)</button>
-                <button onclick="blank()" class="key clear">C</button>
-                <button onclick="erase()" class="key backspace"><span
-                        class="material-symbols-outlined">backspace</span></button>
-                <button onclick="reciprocal()" class="key reciprocal">1/x</button>
-                <button onclick="square()" class="key square">x²</button>
-                <button onclick="sqroot()" class="key sqroot">²√x</button>
-                <button onclick="append('/')" class="key divide">÷</button>
-                <button onclick="append('7')" class="key seven">7</button>
-                <button onclick="append('8')" class="key eight">8</button>
-                <button onclick="append('9')" class="key nine">9</button>
-                <button onclick="append('*')" class="key multiply">×</button>
-                <button onclick="append('4')" class="key four">4</button>
-                <button onclick="append('5')" class="key five">5</button>
-                <button onclick="append('6')" class="key six">6</button>
-                <button onclick="append('-')" class="key sub">-</button>
-                <button onclick="append('1')" class="key one">1</button>
-                <button onclick="append('2')" class="key two">2</button>
-                <button onclick="append('3')" class="key three">3</button>
-                <button onclick="append('+')" class="key add">+</button>
-                <button onclick="sign()" class="key sign">+/-</button>
-                <button onclick="append('0')" class="key zero">0</button>
-                <button onclick="append('.')" class="key point">.</button>
-                <button onclick="solve()" class="key equal">=</button>
-            </div>
+            <section class="standardSec" style="display: none;">
+                <div class="keypad">
+                    <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
+                    <button onclick="append('&#41;')" class="key Rbrac">)</button>
+                    <button onclick="blank()" class="key clear">C</button>
+                    <button onclick="erase()" class="key backspace"><span
+                            class="material-symbols-outlined">backspace</span></button>
+                    <button onclick="reciprocal()" class="key reciprocal">1/x</button>
+                    <button onclick="square()" class="key square">x²</button>
+                    <button onclick="sqroot()" class="key sqroot">²√x</button>
+                    <button onclick="append('/')" class="key divide">÷</button>
+                    <button onclick="append('7')" class="key seven">7</button>
+                    <button onclick="append('8')" class="key eight">8</button>
+                    <button onclick="append('9')" class="key nine">9</button>
+                    <button onclick="append('*')" class="key multiply">×</button>
+                    <button onclick="append('4')" class="key four">4</button>
+                    <button onclick="append('5')" class="key five">5</button>
+                    <button onclick="append('6')" class="key six">6</button>
+                    <button onclick="append('-')" class="key sub">-</button>
+                    <button onclick="append('1')" class="key one">1</button>
+                    <button onclick="append('2')" class="key two">2</button>
+                    <button onclick="append('3')" class="key three">3</button>
+                    <button onclick="append('+')" class="key add">+</button>
+                    <button onclick="sign()" class="key sign">+/-</button>
+                    <button onclick="append('0')" class="key zero">0</button>
+                    <button onclick="append('.')" class="key point">.</button>
+                    <button onclick="solve()" class="key equal">=</button>
+                </div>
+            </section>
+            <section class="scientificSec">
+                <div class="keypad2">
+                    
+                    <button class="key" onclick="">sin</button>
+                    <button class="key" onclick="">sin-1</button>
+                    <button class="key" onclick="">pi</button>
+                    <button class="key" onclick="">n!</button>
+                    <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
+                    <button onclick="append('&#41;')" class="key Rbrac">)</button>
+                    <button onclick="blank()" class="key clear">C</button>
+                    <button onclick="erase()" class="key backspace"><span
+                            class="material-symbols-outlined">backspace</span></button>
+                    <button class="key" onclick="">cos</button>
+                    <button class="key" onclick="">cos-1</button>
+                    <button class="key" onclick="">e</button>
+                    <button class="key" onclick="">|x|</button>
+                    <button onclick="reciprocal()" class="key reciprocal">1/x</button>
+                    <button onclick="square()" class="key square">x²</button>
+                    <button onclick="sqroot()" class="key sqroot">²√x</button>
+                    <button onclick="append('/')" class="key divide">÷</button>
+                    <button class="key" onclick="">tan</button>
+                    <button class="key" onclick="">tan-1</button>
+                    <button class="key" onclick="">yrootx</button>
+                    <button class="key" onclick="">xy</button>
+                    <button onclick="append('7')" class="key seven">7</button>
+                    <button onclick="append('8')" class="key eight">8</button>
+                    <button onclick="append('9')" class="key nine">9</button>
+                    <button onclick="append('*')" class="key multiply">×</button>
+                    <button class="key" onclick="">cosec</button>
+                    <button class="key" onclick="">cosec-1</button>
+                    <button class="key" onclick="">MOD</button>
+                    <button class="key" onclick="">10x</button>
+                    <button onclick="append('4')" class="key four">4</button>
+                    <button onclick="append('5')" class="key five">5</button>
+                    <button onclick="append('6')" class="key six">6</button>
+                    <button onclick="append('-')" class="key sub">-</button>
+                    <button class="key" onclick="">sec</button>
+                    <button class="key" onclick="">sec-1</button>
+                    <button class="key" onclick="">logxy</button>
+                    <button class="key" onclick="">log</button>
+                    <button onclick="append('1')" class="key one">1</button>
+                    <button onclick="append('2')" class="key two">2</button>
+                    <button onclick="append('3')" class="key three">3</button>
+                    <button onclick="append('+')" class="key add">+</button>
+                    <button class="key" onclick="">cot</button>
+                    <button class="key" onclick="">cot-1</button>
+                    <button class="key" onclick="">ex</button>
+                    <button class="key" onclick="">ln</button>
+                    <button onclick="sign()" class="key sign">+/-</button>
+                    <button onclick="append('0')" class="key zero">0</button>
+                    <button onclick="append('.')" class="key point">.</button>
+                    <button onclick="solve()" class="key equal">=</button>
+                </div>
+            </section>
         </div>
 
     </div>
