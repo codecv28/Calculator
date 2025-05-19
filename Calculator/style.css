@@ -60,7 +60,7 @@ input::placeholder{
     border-radius: 20px;
     align-self: center;
     padding: 0;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.15s ease-in-out;
     width: 34px;
     height: 34px;
     z-index: 500;
@@ -132,6 +132,22 @@ input::placeholder{
                          "cell21 cell22 cell23 cell24";
 }
 
+.keypad2{
+    border: none;/*2px solid red; */
+    height: 450px;
+    margin: 40px 10px 0 20px ;
+    display: grid;
+    grid-template-areas: "cell1 cell2 cell3 cell4 cell5 cell6 cell7 cell8"
+                         "cell9 cell10 cell11 cell12 cell13 cell14 cell15 cell16"
+                         "cell17 cell18 cell19 cell20 cell21 cell22 cell23 cell24"
+                         "cell25 cell26 cell27 cell28 cell29 cell30 cell31 cell32"
+                         "cell33 cell34 cell35 cell36 cell37 cell38 cell39 cell40"
+                         "cell41 cell42 cell43 cell44 cell45 cell46 cell47 cell48"
+                         "cell49 cell50 cell51 cell52 cell53 cell54 cell55 cell56";
+}
+
+
+
 .key{
     background-color: rgb(72, 109, 146);
     border-radius: 35px;
@@ -156,5 +172,18 @@ input::placeholder{
     margin: 0;
 }
 
+/* for scientific section all new css design for content */
 
+    .sciContainer{
+        width: 700px;
+        height: 650px;
+    }
 
+    .scisideSection{
+        transform: translate3d(-100px,100px,0px);
+        display: none;
+    }
+
+    .sciInput{
+        width: 600px;
+    }
