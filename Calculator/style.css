@@ -2,16 +2,33 @@ html{
     height: 100%;
 }
 body{
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(9, 48, 87);
+}
+.main{
+    position: absolute;
+}
+
+.title{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    text-shadow: 10px 10px 10px black;
 }
 .container{
     width: 400px;
     height: 600px;
-    border: 2px solid black;
+    border: none;
     border-radius: 20px;
+    background-color: rgb(13, 62, 112);
+    box-shadow: 10px 10px 20px black;
+    
+    
 }
 .section1{
     display: flex;
@@ -27,13 +44,16 @@ body{
     padding-left: 10px;
     border: none;
     outline: none;
+    background-color: rgb(13, 62, 112);
+    color: white;
 }
 input::placeholder{
-    color: rgb(190, 189, 189);
+    color: rgb(185, 183, 183);
 }
 .sidebarBTN{
     margin-top: 50px;
     margin-left: 10px;
+    color: white;
     /* size: 100px; */
     cursor: pointer;
     border: 2px solid transparent;
@@ -43,10 +63,62 @@ input::placeholder{
     transition: all 0.35s ease-in-out;
     width: 34px;
     height: 34px;
+    z-index: 500;
 }
 .sidebarBTN:hover{
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(71, 95, 134);
+    /* transform: rotate(90deg); */
+
 }
+
+.sideSection{
+    transform: translate3d(-90px,30px,0);
+    z-index: 400;
+}
+.sidebar{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: rgb(8, 94, 151);
+    width: 200px;
+    height: 400px;
+}
+.Standard{
+    display: block;
+    width: 204px;
+    background-color: transparent;
+    margin: 50px 0 20px 0;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(47, 126, 190);
+    border: none;
+    cursor: pointer;
+    transform: translateX(-2px);
+}
+.Standard:hover{
+    background-color: rgb(61, 134, 194);
+}
+.Scientific{
+    display: block;
+    width: 204px;
+    background-color: transparent;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(47, 126, 190);
+    border: none;
+    cursor: pointer;
+    transform: translateX(-2px);
+
+    /* margin: 25px 0 0 0; */
+}
+.Scientific:hover{
+    background-color: rgb(61, 134, 194);
+}
+
+/* style="display: none;" */
+
+
 .keypad{
     border: none;/*2px solid red; */
     height: 450px;
@@ -61,6 +133,7 @@ input::placeholder{
 }
 
 .key{
+    background-color: rgb(72, 109, 146);
     border-radius: 35px;
     border: none;
     width: 70px;
@@ -82,3 +155,6 @@ input::placeholder{
     border-radius: 36px;
     margin: 0;
 }
+
+
+
