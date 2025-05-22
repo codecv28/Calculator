@@ -1,5 +1,7 @@
 const input = document.querySelector('.input');
 
+//given below functions are for functionality of all the keys according to their symbols and mathematical operations
+
 function append(char) {
     input.value += char;
 }
@@ -60,7 +62,7 @@ function logarithm() {
 }
 function lnLOG() {
     if (isFinite(input.value)) {
-        input.value = Math.log(input.value);
+        input.value = (Math.log(input.value)).toFixed(6);
     }
     else {
         input.value = 'Error'
@@ -68,7 +70,7 @@ function lnLOG() {
 }
 function tenLOG() {
     if (isFinite(input.value)) {
-        input.value = Math.log10(input.value);
+        input.value = (Math.log10(input.value)).toFixed(6);
     }
     else {
         input.value = 'Error'
@@ -160,6 +162,8 @@ function roundOF(num) {
     }
 }
 
+//functions for basic trigonometric operations
+
 function trigoperator(char) {
     if (isFinite(input.value)) {
 
@@ -223,39 +227,35 @@ function trigoperator(char) {
     }
 }
 
+//inverse trigonometric operations
+
 function inverseTrig1(char) {
     if (isFinite(input.value)) {
         let z = input.value;
-        if (z >= -1 || z <= 1) {
+        if (z >= -1 && z <= 1) {
             switch (char) {
                 case 'sin⁻¹':
-                    input.value = Math.asin(z) * 180 / Math.PI;
+                    input.value = (Math.asin(z) * 180 / Math.PI).toFixed(6);
                     break;
                 case 'cos⁻¹':
-                    input.value = Math.acos(z) * 180 / Math.PI;
+                    input.value = (Math.acos(z) * 180 / Math.PI).toFixed(6);
                     break;
-                default:
-                    input.value = 'Error';
-            }
-
-
+                    }
+        }
+        else{
             switch (char) {
-                case 'cosec⁻¹':
-                    input.value = Math.asin(1 / z) * 180 / Math.PI;
-                    break;
+            case 'cosec⁻¹':
+                input.value = (Math.asin(1/z) * 180 / Math.PI).toFixed(6);
+                break;
                 case 'sec⁻¹':
-                    input.value = Math.acos(1 / z) * 180 / Math.PI;
+                    input.value = (Math.acos(1/z) * 180 / Math.PI).toFixed(6);
                     break;
-                default:
-                    input.value = 'Error';
+                    default:
+                        input.value = 'Error';
+                        
             }
-        }
-
-        else {
-            input.value = 'Error';
-        }
-
-    }
+      
+    }}
     else {
         input.value = 'Error';
     }
@@ -267,10 +267,10 @@ function inverseTrig2(char) {
 
         switch (char) {
             case 'tan⁻¹':
-                input.value = Math.atan(z) * 180 / Math.PI;
+                input.value = (Math.atan(z) * 180 / Math.PI).toFixed(6);
                 break;
             case 'cot⁻¹':
-                input.value = Math.atan(1 / z) * 180 / Math.PI;
+                input.value = (Math.atan(1/z) * 180 / Math.PI).toFixed(6);
                 break;
             default:
                 input.value = 'Error';
@@ -280,6 +280,8 @@ function inverseTrig2(char) {
         input.value = 'Error';
     }
 }
+
+//function that solves valid mathematical problems given by user
 
 function solve() {
     if (!input.value.trim()) {
@@ -325,11 +327,9 @@ input.addEventListener('keydown', (event) => {
     }
 })
 
-//sidebar functionality
+//making sidebar and buttons functional and changing the calculator according to the options provided in the sidebar 
 const sidebarBTN = document.querySelector('.sidebarBTN');
 const sideSection = document.querySelector('.sideSection');
-
-//changing calculators
 
 const container = document.querySelector('.container');
 
@@ -349,6 +349,10 @@ Standard.addEventListener('click', () => {
     input.classList.remove("sciInput");
     container.classList.remove("sciContainer");
     sideSection.classList.remove("scisideSection");
+    sideSection.classList.remove('SCIsideSectionSTD1');
+    sideSection.classList.remove('SCIsideSectionSTD2');
+    sideSection.classList.add('sideSectionSTD1');
+    sideSection.classList.remove('sideSectionSTD2');
     title.innerHTML = `Standard Calculator`;
     sidebarBTN.style.transform = 'rotate(0deg)';
 })
@@ -361,7 +365,10 @@ Scientific.addEventListener('click', () => {
     input.classList.add("sciInput");
     container.classList.add("sciContainer");
     sideSection.classList.remove('sideSectionShow');
+    sideSection.classList.remove('sideSectionSTD1');
+    sideSection.classList.remove('sideSectionSTD2');
     sideSection.classList.add('SCIsideSectionSTD1');
+    sideSection.classList.remove('SCIsideSectionSTD2');
     title.innerHTML = `Scientific Calculator`;
     sidebarBTN.style.transform = 'rotate(0deg)';
 
@@ -375,8 +382,6 @@ sidebarBTN.addEventListener('click', () => {
             sideSection.classList.replace('sideSectionSTD1', 'sideSectionSTD2');
             sidebarBTN.style.transform = 'rotate(90deg)';
             sideSection.classList.add('sideSectionShow');
-
-            // sideSection.style.transform = 'translate3d(-90px,12px,0)';
         }
         else {
             sideSection.classList.replace('sideSectionSTD2', 'sideSectionSTD1');
@@ -385,13 +390,12 @@ sidebarBTN.addEventListener('click', () => {
         }
     }
     else if (standardSec.style.display != 'block') {
+
         if (sideSection.classList.contains('SCIsideSectionSTD1')) {
 
             sideSection.classList.replace('SCIsideSectionSTD1', 'SCIsideSectionSTD2');
             sidebarBTN.style.transform = 'rotate(90deg)';
             sideSection.classList.add('sideSectionShow');
-
-            // sideSection.style.transform = 'translate3d(-90px,12px,0)';
         }
         else {
             sideSection.classList.replace('SCIsideSectionSTD2', 'SCIsideSectionSTD1');
