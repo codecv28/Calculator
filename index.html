@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+</head>
+
+<body>
+    <section class="sideSection sideSectionSTD1">
+        <div class="sidebar">
+            <button class="Standard">Standard</button>
+            <button class="Scientific">Scientific</button>
+        </div>
+    </section>
+    <div class="main">
+        <div class="title">Standard Calculator</div>
+        <div class="proxyContainer">
+
+            <div class="container">
+
+                <div class="section1">
+                    <div class="sidebarBTN">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">menu</span>
+                    </div>
+
+                    <div class="inputField">
+                        <input type="text" placeholder="0" class="input">
+                    </div>
+                </div>
+
+                <section class="standardSec">
+                    <div class="keypad">
+                        <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
+                        <button onclick="append('&#41;')" class="key Rbrac">)</button>
+                        <button onclick="blank()" class="key clear">C</button>
+                        <button onclick="erase()" class="key backspace"><span
+                                class="material-symbols-outlined">backspace</span></button>
+                        <button onclick="reciprocal()" class="key reciprocal">1/x</button>
+                        <button onclick="square()" class="key square">x²</button>
+                        <button onclick="sqroot()" class="key sqroot">²√x</button>
+                        <button onclick="append('/')" class="key divide">÷</button>
+                        <button onclick="append('7')" class="key seven">7</button>
+                        <button onclick="append('8')" class="key eight">8</button>
+                        <button onclick="append('9')" class="key nine">9</button>
+                        <button onclick="append('*')" class="key multiply">×</button>
+                        <button onclick="append('4')" class="key four">4</button>
+                        <button onclick="append('5')" class="key five">5</button>
+                        <button onclick="append('6')" class="key six">6</button>
+                        <button onclick="append('-')" class="key sub">-</button>
+                        <button onclick="append('1')" class="key one">1</button>
+                        <button onclick="append('2')" class="key two">2</button>
+                        <button onclick="append('3')" class="key three">3</button>
+                        <button onclick="append('+')" class="key add">+</button>
+                        <button onclick="sign()" class="key sign">+/-</button>
+                        <button onclick="append('0')" class="key zero">0</button>
+                        <button onclick="append('.')" class="key point">.</button>
+                        <button onclick="solve()" class="key equal">=</button>
+                    </div>
+                </section>
+                <section class="scientificSec" style="display: none;">
+                    <div class="keypad2">
+
+                        <button class="key" onclick="trigoperator('sin')">sin</button>
+                        <button class="key" onclick="inverseTrig1('sin⁻¹')">sin⁻¹</button>
+                        <button class="key" onclick="specialAppend('π')">π</button>
+                        <button class="key" onclick="factorial()">n!</button>
+                        <button onclick="append( '&#40;' )" class="key Lbrac">(</button>
+                        <button onclick="append('&#41;')" class="key Rbrac">)</button>
+                        <button onclick="blank()" class="key clear">C</button>
+                        <button onclick="erase()" class="key backspace"><span
+                                class="material-symbols-outlined">backspace</span></button>
+                        <button class="key" onclick="trigoperator('cos')">cos</button>
+                        <button class="key" onclick="inverseTrig1('cos⁻¹')">cos⁻¹</button>
+                        <button class="key" onclick="specialAppend('e')">e</button>
+                        <button class="key" onclick="absolute()">|x|</button>
+                        <button onclick="reciprocal()" class="key reciprocal">1/x</button>
+                        <button onclick="square()" class="key square">x²</button>
+                        <button onclick="sqroot()" class="key sqroot">²√x</button>
+                        <button onclick="append('/')" class="key divide">÷</button>
+                        <button class="key" onclick="trigoperator('tan')">tan</button>
+                        <button class="key" onclick="inverseTrig2('tan⁻¹')">tan⁻¹</button>
+                        <button class="key" onclick="xRooty()">ʸ√x</button>
+                        <button class="key" onclick="xtoPowery()">xʸ</button>
+                        <button onclick="append('7')" class="key seven">7</button>
+                        <button onclick="append('8')" class="key eight">8</button>
+                        <button onclick="append('9')" class="key nine">9</button>
+                        <button onclick="append('*')" class="key multiply">×</button>
+                        <button class="key" onclick="trigoperator('cosec')">cosec</button>
+                        <button class="key" onclick="inverseTrig1('cosec⁻¹')">cosec⁻¹</button>
+                        <button class="key" onclick="modremainder()">MOD</button>
+                        <button class="key" onclick="tentoPowerx()">10ˣ</button>
+                        <button onclick="append('4')" class="key four">4</button>
+                        <button onclick="append('5')" class="key five">5</button>
+                        <button onclick="append('6')" class="key six">6</button>
+                        <button onclick="append('-')" class="key sub">-</button>
+                        <button class="key" onclick="trigoperator('sec')">sec</button>
+                        <button class="key" onclick="inverseTrig1('sec⁻¹')">sec⁻¹</button>
+                        <button class="key" onclick="logarithm()">logᵧx</button>
+                        <button class="key" onclick="tenLOG()">log</button>
+                        <button onclick="append('1')" class="key one">1</button>
+                        <button onclick="append('2')" class="key two">2</button>
+                        <button onclick="append('3')" class="key three">3</button>
+                        <button onclick="append('+')" class="key add">+</button>
+                        <button class="key" onclick="trigoperator('cot')">cot</button>
+                        <button class="key" onclick="inverseTrig2('cot⁻¹')">cot⁻¹</button>
+                        <button class="key" onclick="etoPowery()">eˣ</button>
+                        <button class="key" onclick="lnLOG()">ln</button>
+                        <button onclick="sign()" class="key sign">+/-</button>
+                        <button onclick="append('0')" class="key zero">0</button>
+                        <button onclick="append('.')" class="key point">.</button>
+                        <button onclick="solve()" class="key equal">=</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
