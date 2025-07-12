@@ -1,6 +1,7 @@
 # Calculator
 A clean, user-friendly calculator web app featuring both Standard and Scientific modes. Built with HTML, CSS, and JavaScript, this calculator offers a visually appealing interface with essential arithmetic functions as well as advanced scientific operations like trigonometric, exponential, and logarithmic calculations.
 
+Deployed Web App: https://codecv28.github.io/Calculator/
 Technolgies used:
 <br>
 HTML5   <br>
